@@ -11,7 +11,7 @@ This canvas contains the complete final project ready-to-run files. Drop your da
 ```yaml
 ---
 title: "Covid91 vaccine study Final2024"
-author: "Put your name here!"
+author: "Brianna Salcedo"
 output:
   html_document:
     number_sections: true
@@ -21,12 +21,12 @@ date: "`r Sys.Date()`"
 ---
 ```
 
+```r
 ```{r setup, include=FALSE}
 # Load libraries
 library(tidyverse)
 library(broom)
 library(forcats)
-# Avoid CRAN-only nonstandard libraries; tigerstats optional
 
 # Helpful options
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
@@ -150,6 +150,19 @@ run_subgroup_analysis <- function(dat, subgroup, outcome = "infected", treatment
 ```
 
 ---
+```{r align-columns, message=FALSE, warning=FALSE}
+# Make sure the columns used later actually exist in FinalData
+# Your raw data columns: treatment, sex, LGBTQ, DrugUser, infected
+
+FinalData <- FinalData %>%
+  dplyr::mutate(
+    group              = treatment,   # vaccine / placebo
+    gender             = sex,         # M / F
+    sexual_orientation = LGBTQ,       # straight / gay
+    drug_use           = DrugUser     # yes / no
+  )
+# Check column names (optional)
+names(FinalData)
 
 # Males
 
