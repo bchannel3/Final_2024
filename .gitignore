@@ -1,29 +1,13 @@
-# RStudio project settings
+### 3) `.gitignore`
+
 .Rproj.user/
 .Rhistory
 .RData
 .Ruserdata
-
-# OS-generated files
-.DS_Store
-Thumbs.db
-
-# knitr / R Markdown output
+.Rhistory
+.Rapp.history
 *.html
 *.pdf
 *.docx
-*.md
-*.tex
-cache/
-*_cache/
-.Rproj.user
-
-# Logs and temporary files
-*.log
-
-# Large data or auto-saves
-*.csv~
-*.bak
-
-# VSCode
-.vscode/
+.DS_Store
+__MACOSX
