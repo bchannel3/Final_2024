@@ -1,0 +1,29 @@
+# RStudio project settings
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# knitr / R Markdown output
+*.html
+*.pdf
+*.docx
+*.md
+*.tex
+cache/
+*_cache/
+.Rproj.user
+
+# Logs and temporary files
+*.log
+
+# Large data or auto-saves
+*.csv~
+*.bak
+
+# VSCode
+.vscode/
